@@ -45,28 +45,28 @@ def df_to_excel_bytes(df: pd.DataFrame) -> bytes:
 # ----------------------
 # Feature Descriptions
 # ----------------------
-feature_descriptions = {
-    "RXQASA_L_RXQ510": "Apakah pasien pernah mendapat diagnosis asma?",
-    "DIETARY DR1IFF_L_DR1SELE": "Jumlah asupan energi dari makanan (hari 1)",
-    "BPQ_L_BPQ020": "Apakah pasien pernah diberitahu punya tekanan darah tinggi?",
-    "DEMOGRAFI_INDFMPIR": "Rasio pendapatan keluarga terhadap ambang kemiskinan",
-    "DEMOGRAFI_RIDAGEYR": "Usia pasien (tahun)",
-    "PAQ_L_PAD680": "Seberapa sering pasien melakukan aktivitas fisik berat?",
-    "BPQ_L_BPQ101D": "Minum obat tekanan darah saat ini",
-    "SLQ_L_SLD012": "Apakah pasien mengalami gangguan tidur?",
-    "DEMOGRAFI_DMDeduc2": "Tingkat pendidikan tertinggi yang diselesaikan",
-    "BMX_L_BMXHIP": "Lingkar pinggul (cm)",
-    "PAQ_L_PAD790Q": "Durasi aktivitas ringan per hari",
-    "BMX_L_BMXWAIST": "Lingkar pinggang (cm)",
-    "DIQ_L_DIQ010": "Apakah pasien pernah didiagnosis diabetes?",
-    "DEMOGRAFI_SDMVSTRA": "Strata survei NHANES",
-    "DEMOGRAFI_WTINT2YR": "Bobot sampel survei 2 tahun",
-    "CBC_L_LBXPLTSI": "Jumlah trombosit dalam darah",
-    "TCHOL_L_LBXTC": "Kadar kolesterol total (mg/dL)",
-    "SMQ_L_SMQ020": "Status merokok",
-    "BMX_L_BMDSTATS": "Status massa tulang",
-    "PAQ_L_PAD810Q": "Apakah pasien jalan kaki minimal 10 menit?",
-}
+# feature_descriptions = {
+#     "RXQASA_L_RXQ510": "Apakah pasien pernah mendapat diagnosis asma?",
+#     "DIETARY DR1IFF_L_DR1SELE": "Jumlah asupan energi dari makanan (hari 1)",
+#     "BPQ_L_BPQ020": "Apakah pasien pernah diberitahu punya tekanan darah tinggi?",
+#     "DEMOGRAFI_INDFMPIR": "Rasio pendapatan keluarga terhadap ambang kemiskinan",
+#     "DEMOGRAFI_RIDAGEYR": "Usia pasien (tahun)",
+#     "PAQ_L_PAD680": "Seberapa sering pasien melakukan aktivitas fisik berat?",
+#     "BPQ_L_BPQ101D": "Minum obat tekanan darah saat ini",
+#     "SLQ_L_SLD012": "Apakah pasien mengalami gangguan tidur?",
+#     "DEMOGRAFI_DMDeduc2": "Tingkat pendidikan tertinggi yang diselesaikan",
+#     "BMX_L_BMXHIP": "Lingkar pinggul (cm)",
+#     "PAQ_L_PAD790Q": "Durasi aktivitas ringan per hari",
+#     "BMX_L_BMXWAIST": "Lingkar pinggang (cm)",
+#     "DIQ_L_DIQ010": "Apakah pasien pernah didiagnosis diabetes?",
+#     "DEMOGRAFI_SDMVSTRA": "Strata survei NHANES",
+#     "DEMOGRAFI_WTINT2YR": "Bobot sampel survei 2 tahun",
+#     "CBC_L_LBXPLTSI": "Jumlah trombosit dalam darah",
+#     "TCHOL_L_LBXTC": "Kadar kolesterol total (mg/dL)",
+#     "SMQ_L_SMQ020": "Status merokok",
+#     "BMX_L_BMDSTATS": "Status massa tulang",
+#     "PAQ_L_PAD810Q": "Apakah pasien jalan kaki minimal 10 menit?",
+# }
 
 nhanes_links = {
     "DEMOGRAFI": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm",
