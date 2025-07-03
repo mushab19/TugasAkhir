@@ -68,6 +68,24 @@ feature_descriptions = {
     "PAQ_L_PAD810Q": "Apakah pasien jalan kaki minimal 10 menit?",
 }
 
+nhanes_links = {
+    "DEMOGRAFI": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm",
+    "DIETARY (DR1IFF_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DR1IFF_L.htm",
+    "DIETARY (DR1TOT_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DR1TOT_L.htm",
+    "Body Measures (BMX_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm",
+    "Blood Pressure - Oscillometric Measurements (BPXO_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BPXO_L.htm",
+    "Complete Blood Count with 5-Part Differential in Whole Blood (CBC_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/CBC_L.htm",
+    "Cholesterol-High-Density Lipoprotein (HDL_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HDL_L.htm",
+    "High-Sensitivity C-Reactive Protein (HSCRP_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/HSCRP_L.htm",
+    "Cholesterol - Total (TCHOL_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/TCHOL_L.htm",
+    "Blood Pressure & Cholesterol (BPQ_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BPQ_L.htm",
+    "Diabetes (DIQ_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DIQ_L.htm",
+    "Smoking - Cigarette Use (SMQ_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQ_L.htm",
+    "Physical Activity (PAQ_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/PAQ_L.htm",
+    "Preventive Aspirin Use (RXQASA_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/RXQASA_L.htm",
+    "Sleep Disorders (SLQ_L)": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SLQ_L.htm",
+}
+
 # ----------------------
 # Judul dan Threshold
 # ----------------------
@@ -148,12 +166,17 @@ if df_input is not None:
             st.pyplot(fig)
 
             # Penjelasan Fitur
-            with st.expander("📘 Kamus Fitur (Klik untuk lihat penjelasan nama kolom)"):
-                for col in X_input.columns:
-                    if col in feature_descriptions:
-                        st.markdown(f"**{col}**: {feature_descriptions[col]}")
-                    else:
-                        st.markdown(f"**{col}**: _(Deskripsi belum tersedia)_")
+            # with st.expander("📘 Kamus Fitur (Klik untuk lihat penjelasan nama kolom)"):
+            #     for col in X_input.columns:
+            #         if col in feature_descriptions:
+            #             st.markdown(f"**{col}**: {feature_descriptions[col]}")
+            #         else:
+            #             st.markdown(f"**{col}**: _(Deskripsi belum tersedia)_")
+            with st.expander("📘 Link Dokumentasi Fitur NHANES"):
+                st.markdown("Berikut adalah link ke dokumentasi NHANES berdasarkan kategori datanya:")
+                for kategori, url in nhanes_links.items():
+                    st.markdown(f"- [{kategori}]({url})")
+
 
             # # SHAP Force Plot (Pasien Tertentu)
             # st.subheader("👤 SHAP Force Plot untuk Pasien Tertentu")
